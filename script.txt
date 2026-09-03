@@ -1,0 +1,64 @@
+// Data Models containing descriptions for different enterprise business service operations
+const servicesDataModel = {
+    cloud: {
+        title: "Scale Infrastructures Globally",
+        desc: "Our cloud teams architecture zero-downtime microservice clusters hosted on AWS and Google Cloud platform instances to keep system processes up continuously.",
+        bullets: ["Kubernetes Auto-Scaling", "CI/CD Automation Pipelines", "99.99% Guaranteed Availability SLAs"]
+    },
+    apps: {
+        title: "Custom Full-Stack Mobile & Web Development",
+        desc: "We engineer pixel-perfect, highly responsive client layouts tightly unified with reliable, distributed server infrastructures using modern software architectures.",
+        bullets: ["React / Node.js Custom Frameworks", "Native Android & iOS Apps", "High-Performance REST/GraphQL APIs"]
+    },
+    security: {
+        title: "Rigorous Zero-Trust Cybersecurity Auditing",
+        desc: "Protect sensitive user information metrics and company assets against threat attacks with modern compliance mechanisms and active code penetration scanning.",
+        bullets: ["End-to-End Encryption Models", "SOC2 & ISO 27001 Audit Compliance", "Automated Deep Security Testing Monitoring"]
+    }
+};
+
+// DOM Query Bindings for Toggles
+const tabButtons = document.querySelectorAll('.tab-btn');
+const tabContentDisplay = document.getElementById('tab-content-display');
+const leadForm = document.getElementById('lead-capture-form');
+
+// --- INTERACTIVE SERVICE TAB DATA SWITCH ENGINE ---
+tabButtons.forEach(button => {
+    button.addEventListener('click', function() {
+        // 1. Remove active focusing design styles from older clicked choices
+        tabButtons.forEach(btn => btn.classList.remove('active'));
+        this.classList.add('active');
+
+        // 2. Fetch specific targeting structural models based on chosen custom data value attributes
+        const chosenServiceKey = this.getAttribute('data-target');
+        const matchedModel = servicesDataModel[chosenServiceKey];
+
+        // 3. Rebuild inner list items loop markup templates
+        let bulletHtmlListString = '';
+        matchedModel.bullets.forEach(bulletText => {
+            bulletHtmlListString += `<li>${bulletText}</li>`;
+        });
+
+        // 4. Inject newly formulated template structures into live screen modules smoothly
+        tabContentDisplay.innerHTML = `
+            <h3>${matchedModel.title}</h3>
+            <p>${matchedModel.desc}</p>
+            <ul>${bulletHtmlListString}</ul>
+        `;
+    });
+});
+
+// --- CORPORATE CLIENT LEAD SUBMISSION CAPTURE SEQUENCE ---
+leadForm.addEventListener('submit', function(event) {
+    event.preventDefault(); // Stop webpage from trying to refresh
+
+    const compName = document.getElementById('company-name').value.trim();
+    const emailInput = document.getElementById('business-email').value.trim();
+    const coreReq = document.getElementById('requirement-select').value;
+
+    // Output mockup modal completion validation prompt alerts to user
+    alert(`💼 Enterprise Proposal Received!\n\nThank you ${compName}. A senior solutions architect will contact you at ${emailInput} regarding your request for our ${coreReq.toUpperCase()} engineering package.`);
+    
+    // Clear out input values upon completion validation sequence loop track
+    leadForm.reset();
+});
