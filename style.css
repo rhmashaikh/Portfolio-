@@ -1,0 +1,245 @@
+/* Universal Base Setup */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #030712; /* Premium Deep Dark Corporate Palette */
+    color: #f3f4f6;
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Header Navbar Styling (Flexible & Responsive) */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 5%; /* Percentage padding scales with browser width */
+    background-color: rgba(17, 24, 39, 0.85);
+    backdrop-filter: blur(12px);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    border-bottom: 1px solid #1f2937;
+}
+
+.logo {
+    font-size: clamp(18px, 4vw, 22px); /* Automatically scales font size based on screen size */
+    font-weight: bold;
+    letter-spacing: 0.5px;
+}
+
+.logo span { color: #6366f1; } /* Premium Indigo Tech Core Focus Color Accent */
+
+.nav-cta-btn {
+    background-color: #6366f1;
+    color: #fff;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: bold;
+    padding: 8px 16px;
+    border-radius: 6px;
+    transition: background 0.2s;
+}
+
+.nav-cta-btn:hover { background-color: #4f46e5; }
+
+/* Marketing Hero Banner Canvas */
+.hero-section {
+    padding: clamp(60px, 10vw, 120px) 24px; /* Adaptive top/bottom padding */
+    text-align: center;
+    background: radial-gradient(circle at top, #1e1b4b 0%, #030712 70%);
+}
+
+.badge {
+    font-size: 11px;
+    background-color: #1e1b4b;
+    color: #818cf8;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-weight: bold;
+    border: 1px solid #312e81;
+    display: inline-block;
+}
+
+.hero-section h1 {
+    font-size: clamp(28px, 6vw, 48px); /* Responsive Typography */
+    margin: 20px auto 15px auto;
+    line-height: 1.25;
+    max-width: 800px;
+}
+
+.hero-section p {
+    font-size: clamp(14px, 2.5vw, 18px);
+    color: #9ca3af;
+    line-height: 1.6;
+    max-width: 650px;
+    margin: 0 auto 35px auto;
+}
+
+.hero-actions {
+    display: flex;
+    flex-wrap: wrap; /* Wraps items into rows automatically on tiny screen grids */
+    justify-content: center;
+    gap: 12px;
+}
+
+.primary-btn, .secondary-btn {
+    padding: 14px 28px;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 6px;
+    text-decoration: none;
+    text-align: center;
+    min-width: 160px; /* Uniform width on phones */
+}
+
+.primary-btn { background-color: #6366f1; color: white; }
+.secondary-btn { background-color: #1f2937; color: #f3f4f6; border: 1px solid #374151; }
+
+/* Interactive Service Tab Sections */
+.services-section {
+    padding: 60px max(24px, 5%);
+    background-color: #0b0f19;
+    border-top: 1px solid #1f2937;
+}
+
+.services-section h2, .contact-section h2 {
+    text-align: center;
+    font-size: clamp(22px, 4vw, 32px);
+    margin: 0 0 8px 0;
+}
+
+.section-subtext {
+    text-align: center;
+    color: #9ca3af;
+    font-size: 14px;
+    margin-bottom: 30px;
+}
+
+.tab-header-row {
+    display: flex;
+    justify-content: space-between;
+    background-color: #111827;
+    padding: 6px;
+    border-radius: 8px;
+    margin: 0 auto 25px auto;
+    border: 1px solid #1f2937;
+    max-width: 500px; /* Confines tab controls beautifully on desktop */
+}
+
+.tab-btn {
+    flex-grow: 1;
+    background: none;
+    border: none;
+    color: #9ca3af;
+    padding: 12px 6px;
+    font-size: clamp(12px, 2.5vw, 14px);
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 6px;
+    transition: background 0.2s, color 0.2s;
+}
+
+.tab-btn.active {
+    background-color: #1f2937;
+    color: #6366f1;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+.tab-body-box {
+    background-color: #111827;
+    padding: clamp(20px, 5vw, 35px);
+    border-radius: 8px;
+    border: 1px solid #1f2937;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.tab-body-box h3 { margin-top: 0; font-size: clamp(16px, 3vw, 22px); color: #6366f1; }
+.tab-body-box p { color: #9ca3af; font-size: 14px; line-height: 1.6; }
+.tab-body-box ul { padding-left: 20px; color: #f3f4f6; font-size: 14px; }
+.tab-body-box li { margin-bottom: 10px; }
+
+/* Business Lead Form Container */
+.contact-section {
+    padding: 60px max(24px, 5%);
+}
+
+.form-container {
+    background-color: #111827;
+    padding: clamp(25px, 6vw, 40px) max(16px, 5%);
+    border-radius: 12px;
+    border: 1px solid #1f2937;
+    max-width: 550px;
+    margin: 0 auto;
+}
+
+.form-container p { text-align: center; color: #9ca3af; font-size: 13px; line-height: 1.5; margin-bottom: 25px; }
+
+.form-group {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    font-size: 11px;
+    font-weight: bold;
+    color: #9ca3af;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.form-group input, .form-group select {
+    background-color: #1f2937;
+    border: 1px solid #374151;
+    padding: 12px;
+    color: white;
+    border-radius: 6px;
+    font-size: 14px;
+    outline: none;
+    width: 100%;
+    transition: border-color 0.2s;
+}
+
+.form-group input:focus, .form-group select:focus {
+    border-color: #6366f1;
+}
+
+.submit-lead-btn {
+    width: 100%;
+    background-color: #6366f1;
+    color: white;
+    border: none;
+    padding: 14px;
+    font-size: 15px;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.submit-lead-btn:active { background-color: #4f46e5; }
+
+/* Simple Corporate Footer */
+footer {
+    text-align: center;
+    padding: 30px 24px;
+    font-size: 12px;
+    color: #6b7280;
+    border-top: 1px solid #1f2937;
+}
+
+/* --- RESPONSIVE DESKTOP MEDIA QUERIES --- */
+@media (min-width: 768px) {
+    /* Side-by-side button row layouts on larger panels instead of stacking */
+    .hero-actions {
+        flex-direction: row;
+    }
+}

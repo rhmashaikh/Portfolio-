@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AuraDev AI | Corporate Tech Solutions</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Corporate Navbar Layout -->
+    <nav class="navbar">
+        <div class="logo">⚡ Aura<span>Dev</span></div>
+        <a href="#contact" class="nav-cta-btn">Get in Touch</a>
+    </nav>
+
+    <!-- Business Hero Banner Section -->
+    <header class="hero-section">
+        <span class="badge">NEXT-GEN SOFTWARE SOLUTIONS</span>
+        <h1>We Build High-Performance Code for Enterprises</h1>
+        <p>Accelerate your business scale with robust cloud infrastructure, full-stack software development, and deep tech web integrations.</p>
+        <div class="hero-actions">
+            <a href="#services" class="primary-btn">Our Services</a>
+            <a href="#contact" class="secondary-btn">Book Consultation</a>
+        </div>
+    </header>
+
+    <!-- Interactive Tabs Service Grid Section -->
+    <section class="services-section" id="services">
+        <h2>Enterprise Services</h2>
+        <p class="section-subtext">Click tabs below to see what our core engineering units specialize in.</p>
+        
+        <!-- Interactive Service Menu Selector Toggles -->
+        <div class="tab-header-row">
+            <button class="tab-btn active" data-target="cloud">Cloud Ops</button>
+            <button class="tab-btn" data-target="apps">Custom Apps</button>
+            <button class="tab-btn" data-target="security">Cyber Sec</button>
+        </div>
+
+        <!-- Service Module Dynamic Data Content Outputs -->
+        <div class="tab-body-box" id="tab-content-display">
+            <h3>Scale Infrastructures Globally</h3>
+            <p>Our cloud teams architecture zero-downtime microservice clusters hosted on AWS and Google Cloud platform instances to keep system processes up continuously.</p>
+            <ul>
+                <li>Kubernetes Auto-Scaling</li>
+                <li>CI/CD Automation Pipelines</li>
+                <li>99.99% Guaranteed Availability SLAs</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Modern B2B Lead Acquisition Contact Form Section -->
+    <section class="contact-section" id="contact">
+        <div class="form-container">
+            <h2>Partner With Us</h2>
+            <p>Tell us about your business goals and our solutions engineer will contact you back within 24 business hours.</p>
+            
+            <form id="lead-capture-form">
+                <div class="form-group">
+                    <label for="company-name">Company Name</label>
+                    <input type="text" id="company-name" placeholder="e.g. Acme Corporation" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="business-email">Business Email</label>
+                    <input type="email" id="business-email" placeholder="name@company.com" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="requirement-select">Primary Requirement</label>
+                    <select id="requirement-select">
+                        <option value="cloud">Cloud Migration</option>
+                        <option value="fullstack">Web App Development</option>
+                        <option value="saas">SaaS MVP Engineering</option>
+                    </select>
+                </div>
+
+                <button type="submit" class="submit-lead-btn">Submit Request</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Simple Corporate Footer -->
+    <footer>
+        <p>&copy; 2026 AuraDev AI Technologies Pvt Ltd. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
